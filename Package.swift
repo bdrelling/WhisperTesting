@@ -17,6 +17,10 @@ let package = Package(
       resources: [
         .copy("models"),
       ]
+      // Does nothing
+      // cSettings: [
+      //   .unsafeFlags(["-O3"]),
+      // ]
     ),
   ]
 )
