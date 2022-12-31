@@ -2,7 +2,7 @@
 
 We have an Xcode project and Swift package. Currently, `whisper.cpp` is implemented directly into the Xcode project, but we are trying to abstract this into our Swift package via `whisper.spm`. However, we're noticing that `whisper.spm` is about 40x slower in `debug` configuration than in `release`.
 
-Unfortunately, SPM does not allow us to override the default compilation mode for an individual module. Adding something like `cSettings: [.unsafeFlags["-O3"]]` to the package definition makes no impact on third-party dependencies.
+Unfortunately, SPM does not allow us to override the default compilation mode for an individual module. Adding something like `cSettings: [.unsafeFlags["-O3"]]` to the package definition makes no impact on third-party dependencies. Similarly, from the Xcode project, we don't seem to have the option for explicit, configuration-based overrides to our dependencies.
 
 ## Sample Output
 
