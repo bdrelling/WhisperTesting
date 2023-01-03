@@ -6,7 +6,7 @@ let package = Package(
   name: "WhisperTesting",
   products: [],
   dependencies: [
-    .package(url: "https://github.com/ggerganov/whisper.spm", from: "1.0.0"),
+    .package(url: "https://github.com/ggerganov/whisper.spm", branch: "master"),
   ],
   targets: [
     .testTarget(
@@ -17,10 +17,6 @@ let package = Package(
       resources: [
         .copy("models"),
       ]
-      // Does nothing
-      // cSettings: [
-      //   .unsafeFlags(["-O3"]),
-      // ]
     ),
   ]
 )
